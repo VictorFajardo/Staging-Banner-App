@@ -1,0 +1,42 @@
+:host {
+    flex: 1 1 auto;
+    /* background-color: #fff; */
+}
+iframe {
+    margin-left: 10px;
+}
+.iframe300x250 {
+    width: 300px;
+    height: 250px;
+}
+.iframe300x600 {
+    width: 300px;
+    height: 600px;
+}
+.iframe728x90 {
+    width: 728px;
+    height: 90px;
+}
+.iframe160x600 {
+    width: 160px;
+    height: 600px;
+}
+.iframe970x66 {
+    width: 970px;
+    height: 66px;
+}
+.iframe1280x100 {
+    width: 1280px;
+    height: 100px;
+}
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #868e96;
+    border-color: #868e96;
+}
+.btn-outline-secondary {
+    color: #868e96;
+    background-color: transparent;
+    background-image: none;
+    border-color: #868e96;
+}

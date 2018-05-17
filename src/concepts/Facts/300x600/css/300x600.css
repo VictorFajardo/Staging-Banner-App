@@ -1,0 +1,198 @@
+@import "resets.css";
+@import url('https://fonts.googleapis.com/css?family=Lato:700,900');
+
+/* Main */
+
+body {
+    background-color: #ccc;
+}
+#wrapper {
+    width: 300px;
+    height: 600px;
+    overflow: hidden;
+    position: absolute;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+#banner {
+    width: 300px;
+    height: 600px;
+    overflow: hidden;
+    perspective: 300px;
+}
+
+
+/* Frames */
+
+#bg, .sheet, #text1, #text2, #text3, #text4, #at, #breathless, #copy, #cta, #logo, #click-area {
+    position: absolute;
+}
+#text1, #at, #breathless, #copy, #logo {
+    opacity: 0;
+}
+
+.sheet {
+    background-color: rgb(255, 255, 255);
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.5);
+    width: 128px;
+    height: 196px;
+}
+#sheet1 {
+    position: absolute;
+    background-image: url('../img/question.png');
+    left: 127px;
+    top: -310px;
+    transform: rotateY(0deg) rotate3d(1, 0, 0, -30deg);
+}
+#sheet2 {
+    background-image: url('../img/lungs.png');
+    left: 86px;
+    top: -308px;
+    transform: rotateY(0deg) rotate3d(1, 0, 0, -30deg);
+}
+#sheet3 {
+    background-image: url('../img/ribbon.png');
+    left: 47px;
+    top: -307px;
+    transform: rotateY(0deg) rotate3d(1, 0, 0, -30deg);
+}
+#bg {
+    background: -webkit-radial-gradient(50% 50%, circle cover, #438885 0%,#1d3a39 100%);
+    background: radial-gradient(circle at 50% 50%, #438885 0%,#1d3a39 100%);
+    width: 440px;
+    /*height: 270px;*/
+    height: 630px;
+    top: -20px;
+    left: 0;
+    /*display: none;*/
+}
+#text1 {
+    top: 336px;
+    left: 33px;
+    width: 230px;
+    overflow: hidden;
+    /*transform: rotate(180deg);*/
+}
+#text1 p {
+    width: 230px;
+    font-size: 23px;
+    text-align: center;
+    line-height: 38px;
+    /*transform: rotate(180deg);*/
+}
+#text2 {
+    top: 488px;
+    left: 280px;
+    width: 260px;
+    height: 0px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#text2inner {
+    width: 260px;
+    height: 150px;
+    transform: rotate(180deg);
+    font-size: 23px;
+    text-align: center;
+    line-height: 38px;
+}
+#text3 {
+    top: 457px;
+    left: 256px;
+    width: 230px;
+    height: 0px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#text3inner {
+    width: 230px;
+    height: 120px;
+    transform: rotate(180deg);
+    font-size: 23px;
+    text-align: center;
+    line-height: 38px;
+}
+#text4 {
+    top: 271px;
+    left: 283px;
+    font-size: 29px;
+    width: 260;
+    height: 0px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#text4inner {
+    width: 260px;
+    height: 30px;
+    transform: rotate(180deg);
+}
+#at {
+    top: 289px;
+    left: 111px;
+}
+#breathless {
+    top: 295px;
+    left: 22px;
+    width: 114px;
+    height: 18px;
+    background-image: url('../img/breathless.png');
+}
+#logo {
+    top: 605px;
+    left: 17px;
+    width: 66px;
+    height: 20px;
+    background-image: url('../img/bi-logo.svg');
+}
+#copy {
+    font-family: Arial;
+    font-size: 9px;
+    top: 602px;
+    left: 115px;
+    line-height: normal;
+    font-weight: 400;
+}
+#cta {
+    top: 323px;
+    left: 132px;
+    width: 0;
+    height: 36px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #004249;
+    border-radius: 17px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#ctaInner {
+    width: 113px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    background: #fff url(../img/arrow.png) right 12px center no-repeat;
+    font-size: 16px;
+    font-weight: 900;
+    transform: rotate(180deg);
+    box-sizing: border-box;
+    padding-right: 13px;
+}
+#click-area {
+  width: 300px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@-moz-document url-prefix() {
+    #copy {
+        line-height: 11px;
+    }
+}

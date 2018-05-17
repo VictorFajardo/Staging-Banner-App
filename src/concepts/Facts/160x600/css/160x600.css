@@ -1,0 +1,199 @@
+@import "resets.css";
+@import url('https://fonts.googleapis.com/css?family=Lato:700,900');
+
+/* Main */
+
+body {
+    background-color: #ccc;
+}
+#wrapper {
+    width: 160px;
+    height: 600px;
+    overflow: hidden;
+    position: absolute;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+#banner {
+    width: 160px;
+    height: 600px;
+    overflow: hidden;
+    perspective: 160px;
+}
+
+
+/* Frames */
+
+#bg, .sheet, #text1, #text2, #text3, #text4, #at, #breathless, #copy, #cta, #logo, #click-area {
+    position: absolute;
+}
+#text1, #at, #breathless, #copy, #logo {
+    opacity: 0;
+}
+
+.sheet {
+    background-color: rgb(255, 255, 255);
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.5);
+    width: 86px;
+    height: 131px;
+}
+#sheet1 {
+    position: absolute;
+    background-image: url('../img/question.png');
+    left: 72px;
+    top: -300px;
+    transform: rotateY(0deg) rotate3d(1, 0, 0, -30deg);
+}
+#sheet2 {
+    background-image: url('../img/lungs.png');
+    left: 35px;
+    top: -298px;
+    transform: rotateY(0deg) rotate3d(1, 0, 0, -30deg);
+}
+#sheet3 {
+    background-image: url('../img/ribbon.png');
+    left: -3px;
+    top: -297px;
+    transform: rotateY(0deg) rotate3d(1, 0, 0, -30deg);
+}
+#bg {
+    background: -webkit-radial-gradient(50% 50%, circle cover, #438885 0%,#1d3a39 100%);
+    background: radial-gradient(circle at 50% 50%, #438885 0%,#1d3a39 100%);
+    width: 440px;
+    /*height: 270px;*/
+    height: 630px;
+    top: -20px;
+    left: 0;
+    /*display: none;*/
+}
+#text1 {
+    top: 262px;
+    left: 0px;
+    width: 154px;
+    overflow: hidden;
+    /*transform: rotate(180deg);*/
+}
+#text1 p {
+    width: 154px;
+    font-size: 19px;
+    text-align: center;
+    line-height: 30px;
+    /*transform: rotate(180deg);*/
+}
+#text2 {
+    top: 413px;
+    left: 154px;
+    width: 154px;
+    height: 0px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#text2inner {
+    width: 154px;
+    height: 150px;
+    transform: rotate(180deg);
+    font-size: 19px;
+    text-align: center;
+    line-height: 30px;
+}
+#text3 {
+    top: 397px;
+    left: 154px;
+    width: 154px;
+    height: 0px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#text3inner {
+    width: 154px;
+    height: 120px;
+    transform: rotate(180deg);
+    font-size: 19px;
+    text-align: center;
+    line-height: 30px;
+}
+#text4 {
+    top: 218px;
+    left: 157px;
+    font-size: 24px;
+    width: 154;
+    height: 0px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#text4inner {
+    width: 154px;
+    height: 60px;
+    text-align: center;
+    transform: rotate(180deg);
+}
+#at {
+    top: 281px;
+    left: -18px;
+}
+#breathless {
+    top: 287px;
+    left: -107px;
+    width: 114px;
+    height: 18px;
+    background-image: url('../img/breathless.png');
+}
+#logo {
+    top: 559px;
+    left: 14px;
+    width: 66px;
+    height: 20px;
+    background-image: url('../img/bi-logo.svg');
+}
+#copy {
+    font-family: Arial;
+    font-size: 9px;
+    top: 589px;
+    left: 14px;
+    line-height: normal;
+    font-weight: 400;
+}
+#cta {
+    top: 270px;
+    left: 137px;
+    width: 0;
+    height: 36px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #004249;
+    border-radius: 17px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#ctaInner {
+    width: 113px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    background: #fff url(../img/arrow.png) right 12px center no-repeat;
+    font-size: 16px;
+    font-weight: 900;
+    transform: rotate(180deg);
+    box-sizing: border-box;
+    padding-right: 13px;
+}
+#click-area {
+  width: 160px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@-moz-document url-prefix() {
+    #copy {
+        line-height: 11px;
+    }
+}

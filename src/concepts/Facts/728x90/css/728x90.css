@@ -1,0 +1,191 @@
+@import "resets.css";
+@import url('https://fonts.googleapis.com/css?family=Lato:700,900');
+
+/* Main */
+
+body {
+    background-color: #ccc;
+}
+#wrapper {
+    width: 728px;
+    height: 90px;
+    overflow: hidden;
+    position: absolute;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+#banner {
+    width: 728px;
+    height: 90px;
+    overflow: hidden;
+    perspective: 728px;
+}
+
+
+/* Frames */
+
+#bg, .sheet, #text1, #text2, #text3, #text4, #at, #breathless, #copy, #cta, #logo, #click-area {
+    position: absolute;
+}
+#text1, #at, #breathless, #copy, #logo {
+    opacity: 0;
+}
+
+.sheet {
+    background-color: rgb(255, 255, 255);
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.5);
+    width: 48px;
+    height: 72px;
+}
+#sheet1 {
+    position: absolute;
+    background-image: url('../img/question.png');
+    left: 233px;
+    top: 209px;
+    transform: rotateY(25deg) rotate3d(1, 0, 0, 120deg);
+}
+#sheet2 {
+    background-image: url('../img/lungs.png');
+    left: 194px;
+    top: 209px;
+    transform: rotateY(25deg) rotate3d(1, 0, 0, 120deg);
+}
+#sheet3 {
+    background-image: url('../img/ribbon.png');
+    left: 153px;
+    top: 207px;
+    transform: rotateY(25deg) rotate3d(1, 0, 0, 120deg);
+}
+#bg {
+    background: -webkit-radial-gradient(50% 50%, circle cover, #438885 0%,#1d3a39 100%);
+    background: radial-gradient(circle at 50% 50%, #438885 0%,#1d3a39 100%);
+    width: 800px;
+    height: 120px;
+    top: -20px;
+    left: 0;
+    /*display: none;*/
+}
+#text1 {
+    top: 76px;
+    left: 569px;
+    width: 300px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#text1 p {
+    width: 300px;
+    font-size: 19px;
+    transform: rotate(180deg);
+}
+#text2 {
+    top: 16px;
+    left: 269px;
+    width: 0;
+    /*height: 150px;*/
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(0deg);
+}
+#text2inner {
+    width: 300px;
+    font-size: 19px;
+    /*height: 150px;*/
+    transform: rotate(0deg);
+}
+#text3 {
+    top: 15px;
+    left: 269px;
+    width: 0;
+    /*height: 90px;*/
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(0deg);
+}
+#text3inner {
+    width: 300px;
+    height: 90px;
+    transform: rotate(0deg);
+}
+#text4 {
+    top: 31px;
+    left: 20px;
+    font-size: 24px;
+    width: 0;
+    height: 30px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(0deg);
+}
+#text4inner {
+    width: 220px;
+    height: 30px;
+    transform: rotate(0deg);
+}
+#at {
+    top: 31px;
+    left: 334px;
+}
+#breathless {
+    top: 37px;
+    left: 245px;
+    width: 114px;
+    height: 18px;
+    background-image: url('../img/breathless.png');
+}
+#logo {
+    top: 56px;
+    left: 532px;
+    width: 66px;
+    height: 20px;
+    background-image: url('../img/bi-logo.svg');
+}
+#copy {
+    font-family: Arial;
+    font-size: 9px;
+    top: 84px;
+    left: 533px;
+    line-height: normal;
+    font-weight: 400;
+}
+#cta {
+    top: 65px;
+    left: 353px;
+    width: 0;
+    height: 36px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #004249;
+    border-radius: 17px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#ctaInner {
+    width: 113px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    background: #fff url(../img/arrow.png) right 12px center no-repeat;
+    font-size: 16px;
+    font-weight: 900;
+    transform: rotate(180deg);
+    box-sizing: border-box;
+    padding-right: 13px;
+}
+#click-area {
+  width: 728px;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@-moz-document url-prefix() {
+    #copy {
+        line-height: 11px;
+    }
+}

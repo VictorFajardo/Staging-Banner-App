@@ -1,0 +1,17 @@
+:host {
+    flex: 0 1 auto;
+}
+section {
+    padding: 10px 20PX;
+    border-top: 1px solid #fff;
+    overflow: auto;
+    color: #5fa4d0;
+    background: #005285;
+}
+div {
+    width: 50%;
+    float: left;
+}
+div:last-of-type {
+    text-align: right;
+}

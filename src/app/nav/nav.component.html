@@ -1,0 +1,18 @@
+<section>
+  <div>
+    <img src="app/assets/wunderman-logo.png" alt="WUNDERMAN">
+  </div>
+  <div>
+    <h3>
+      <a routerLink="/{{base}}">{{jobCode}}</a> - {{concept}} {{size}}
+    </h3>
+  </div>
+  <div>
+    <select #select (change)="changeSelect(select.value)">
+      <option value="">Other Sizes:</option>
+      <ng-template ngFor let-concept [ngForOf]="concepts">
+        <option *ngFor="let item of concept.sizes" value="{{base}}{{concept.concept}}/{{item.b}}">{{concept.concept}} {{item.b}}</option>
+      </ng-template>
+    </select>
+  </div>
+</section>

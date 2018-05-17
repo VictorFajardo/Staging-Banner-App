@@ -1,0 +1,39 @@
+section {
+    width: 600px;
+    padding: 10px;
+    /* border: 1px dashed #000; */
+    margin: 10px auto;
+}
+h3 {
+    font-size: 18px;
+    /* font-weight: bold; */
+    margin: 0;
+}
+hr {
+    margin: 5px 0;
+}
+a {
+    color: #8fc1e0;
+    text-decoration: underline;
+}
+a:hover {
+    color: #b7d7eb;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+li {
+    display: inline;
+    border-right: 1px solid #fff;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+li:first-of-type {
+    border-left: 0;
+    padding-left: 0;
+}
+li:last-of-type {
+    border-right: 0;
+    padding-right: 0;
+}

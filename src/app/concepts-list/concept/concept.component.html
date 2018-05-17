@@ -1,0 +1,8 @@
+<section>
+    <h3>{{concept.concept}}</h3>
+    <hr>
+    <h3>{{concept.type}}</h3>
+    <ul>
+        <li *ngFor="let item of concept.sizes"><a routerLink="{{pre}}{{concept.concept}}/{{item.b}}">{{item.b}}</a></li>
+    </ul>
+</section>

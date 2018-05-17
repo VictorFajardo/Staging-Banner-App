@@ -1,0 +1,27 @@
+<section
+    [ngClass]="{'margin728x90':size==='728x90'}">
+    <p>time: <span>{{time}}s</span></p>
+    <br/>
+    <div class="slider" id="progressSlider"></div>
+    <br/>
+    <button type="button" class="btn btn-outline-secondary btn-sm" (click)="clickPlay()">play</button>
+    <button type="button" class="btn btn-outline-secondary btn-sm" (click)="clickPause()">pause</button>
+    <button type="button" class="btn btn-outline-secondary btn-sm" (click)="clickReverse()">reverse</button>
+    <button type="button" class="btn btn-outline-secondary btn-sm" (click)="clickResume()">resume</button>
+    <button type="button" class="btn btn-outline-secondary btn-sm" (click)="clickRestart()">restart</button>
+    <br/>
+    <br/>
+    <div class="slider" id="speedSlider"></div>
+    <p class="time-scale">time scale: <span>{{speed}}</span></p>
+    <br/>
+    <div id="show-link" class="form-inline">
+        <p>original url:</p>
+        <input type="text" name="url" id="url" value="{{link}}" class="form-control" readonly>
+        <button (click)="copyUrl()" (mouseenter)="mouseEnterCopyUrl()" id="copy-url" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" aria-labelledby="dialogheader" title="Copy URL">
+            <i class="fa fa-files-o" aria-hidden="true"></i>
+        </button>
+        <button (click)="openUrl()" id="open-url" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" title="Open URL">
+            <i class="fa fa-external-link" aria-hidden="true"></i>
+        </button>
+    </div>
+</section>

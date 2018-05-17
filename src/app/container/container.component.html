@@ -1,0 +1,11 @@
+<section>
+  <app-nav
+    [concept]="concept"
+    [size]="size"></app-nav>
+  <div id="iframeContainer"
+    [ngClass]="{'iframe300x250':size==='300x250', 'iframe300x600':size==='300x600', 'iframe728x90':size==='728x90', 'iframe160x600':size==='160x600', 'iframe970x66':size==='970x66', 'iframe1280x100':size==='1280x100'}">
+    <iframe
+      [src]="bannerUrl | safe" frameborder="0">
+    </iframe>
+  </div>
+</section>
