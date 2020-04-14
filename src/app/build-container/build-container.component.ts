@@ -24,12 +24,14 @@ export class BuildContainerComponent implements OnInit {
   jsData;
   doc;
   win;
+  ver;
   public time = 0;
   public progress = 0;
   public speed = 1;
 
   constructor(private loader: LoaderService, private ref: ChangeDetectorRef, private route: ActivatedRoute) {
     (<any>window).updateData = this.update.bind(this);
+    this.ver = new Date().getTime();
   }
 
   ngOnInit() {
@@ -39,7 +41,7 @@ export class BuildContainerComponent implements OnInit {
       this.size = params['conceptSize'];
       this.ref.detectChanges();
       this.baseUrl = 'concepts/' + this.concept + '/' + this.size + '/';
-      this.jsLoader(this.baseUrl + 'js/' + this.size + '.js');
+      this.jsLoader(this.baseUrl + 'js/' + this.size + '.js?v=' + this.ver);
     });
   }
 
@@ -48,7 +50,7 @@ export class BuildContainerComponent implements OnInit {
       .subscribe(
         data => {
           this.jsData = data;
-          this.htmlLoader(this.baseUrl + '/' + this.size + '.html');
+          this.htmlLoader(this.baseUrl + '/' + this.size + '.html?v=' + this.ver);
         }
       );
   }

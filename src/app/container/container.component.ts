@@ -11,14 +11,17 @@ export class ContainerComponent implements OnInit {
   size: String;
   sub;
   bannerUrl;
+  ver;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {
+    this.ver = new Date().getTime();
+  }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.concept = params['conceptName'];
       this.size = params['conceptSize'];
-      this.bannerUrl = './concepts/' + this.concept + '/' + this.size + '/' + this.size + '.html';
+      this.bannerUrl = './concepts/' + this.concept + '/' + this.size + '/' + this.size + '.html?v=' + this.ver;
     });
   }
 

@@ -10,9 +10,11 @@ export class LoaderService {
   jsData;
   htmlData;
   baseHref;
+  ver;
 
   constructor(private http: HttpClient, private platformLocation: PlatformLocation) {
     this.baseHref = (this.platformLocation as any).location.origin + (platformLocation as any).getBaseHrefFromDOM();
+    this.ver = new Date().getTime();
   }
 
   public jsLoad(url, baseUrl): Observable<any> {
@@ -51,7 +53,7 @@ export class LoaderService {
           '</head>',
           '<script type="text/javascript" src="' + gsUrl + 'TimelineLite.min.js"></script></head>'
           );
-        this.htmlData = this.htmlData.replace('css/' + size + '.css', this.baseHref + '/' + baseUrl + 'css/' + size + '.css');
+        this.htmlData = this.htmlData.replace('css/' + size + '.css', this.baseHref + baseUrl + 'css/' + size + '.css?v=' + this.ver);
         this.htmlData = this.htmlData.replace('src="js/' + size + '.js"', '');
         this.htmlData = this.htmlData.replace(/src="js\/TweenLite.min.js/g, 'src="' + gsUrl + 'TweenLite.min.js');
         this.htmlData = this.htmlData.replace(/src="js\/CSSPlugin.min.js/g, 'src="' + gsUrl + 'plugins/CSSPlugin.min.js');
