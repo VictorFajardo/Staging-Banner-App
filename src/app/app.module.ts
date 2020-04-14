@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ConceptsListComponent } from './concepts-list/concepts-list.component';
@@ -35,7 +35,7 @@ export function useFactory(service: ConfigService) { return () => service.load()
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     routing
   ],
   providers: [

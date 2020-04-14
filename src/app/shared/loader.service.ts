@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { PlatformLocation } from '@angular/common';
 import { APP_BASE_HREF } from '@angular/common';
@@ -11,14 +11,14 @@ export class LoaderService {
   htmlData;
   baseHref;
 
-  constructor(private http: Http, private platformLocation: PlatformLocation) {
+  constructor(private http: HttpClient, private platformLocation: PlatformLocation) {
     this.baseHref = (this.platformLocation as any).location.origin + (platformLocation as any).getBaseHrefFromDOM();
   }
 
   public jsLoad(url, baseUrl): Observable<any> {
-    return this.http.get(url)
+    return this.http.get(url, {responseType: 'text'})
       .map((js: any) => {
-        this.jsData = js.text();
+        this.jsData = js;
         // creating the TL
         this.jsData = this.jsData.replace(/window\.onload=function\(\){/g, '');
         this.jsData = this.jsData.replace(/window\.onload = function\(\) {/g, '');
@@ -43,9 +43,9 @@ export class LoaderService {
   }
 
   public htmlLoad(url, gsUrl, baseUrl, size, jsData): Observable<any> {
-    return this.http.get(url)
+    return this.http.get(url, {responseType: 'text'})
       .map((html: any) => {
-        this.htmlData = html.text();
+        this.htmlData = html;
         // creating the iframe
         this.htmlData = this.htmlData.replace(
           '</head>',
