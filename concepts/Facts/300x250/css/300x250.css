@@ -1,0 +1,185 @@
+@import "resets.css";
+@import url('https://fonts.googleapis.com/css?family=Lato:700,900');
+
+/* Main */
+
+body {
+    background-color: #ccc;
+}
+#wrapper {
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    position: absolute;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+#banner {
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    perspective: 300px;
+}
+
+
+/* Frames */
+
+#bg, .sheet, #text1, #text2, #text3, #text4, #at, #breathless, #copy, #cta, #logo, #click-area {
+    position: absolute;
+}
+#text1, #at, #breathless, #copy, #logo {
+    opacity: 0;
+}
+
+.sheet {
+    background-color: rgb(255, 255, 255);
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.5);
+    width: 85px;
+    height: 129px;
+}
+#sheet1 {
+    position: absolute;
+    background-image: url('../img/question.png');
+    left: 217px;
+    top: 265px;
+    transform: rotateY(25deg) rotate3d(1, 0, 0, 120deg);
+}
+#sheet2 {
+    background-image: url('../img/lungs.png');
+    left: 178px;
+    top: 265px;
+    transform: rotateY(25deg) rotate3d(1, 0, 0, 120deg);
+}
+#sheet3 {
+    background-image: url('../img/ribbon.png');
+    left: 138px;
+    top: 265px;
+    transform: rotateY(25deg) rotate3d(1, 0, 0, 120deg);
+}
+#bg {
+    background: -webkit-radial-gradient(50% 50%, circle cover, #438885 0%,#1d3a39 100%);
+    background: radial-gradient(circle at 50% 50%, #438885 0%,#1d3a39 100%);
+    width: 440px;
+    height: 270px;
+    top: -20px;
+    left: 0;
+}
+#text1 {
+    top: 49px;
+    left: 20px;
+    width: 130px;
+    overflow: hidden;
+}
+#text1 p {
+    width: 130px;
+}
+#text2 {
+    top: 197px;
+    left: 138px;
+    width: 0;
+    height: 150px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#text2inner {
+    width: 120px;
+    height: 150px;
+    transform: rotate(180deg);
+}
+#text3 {
+    top: 166px;
+    left: 167px;
+    width: 0;
+    height: 90px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#text3inner {
+    width: 150px;
+    height: 90px;
+    transform: rotate(180deg);
+}
+#text4 {
+    top: 113px;
+    left: 240px;
+    font-size: 24px;
+    width: 0;
+    height: 30px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#text4inner {
+    width: 220px;
+    height: 30px;
+    transform: rotate(180deg);
+}
+#at {
+    top: 126px;
+    left: 111px;
+}
+#breathless {
+    top: 132px;
+    left: 22px;
+    width: 114px;
+    height: 18px;
+    background-image: url('../img/breathless.png');
+}
+#logo {
+    top: 256px;
+    left: 17px;
+    width: 66px;
+    height: 20px;
+    background-image: url('../img/bi-logo.svg');
+}
+#copy {
+    font-family: Arial;
+    font-size: 9px;
+    top: 252px;
+    left: 115px;
+    line-height: normal;
+    font-weight: 400;
+}
+#cta {
+    top: 160px;
+    left: 131px;
+    width: 0;
+    height: 36px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #004249;
+    border-radius: 17px;
+    overflow: hidden;
+    transform-origin: 0% 0%;
+    transform: rotate(180deg);
+}
+#ctaInner {
+    width: 113px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    background: #fff url(../img/arrow.png) right 12px center no-repeat;
+    font-size: 16px;
+    font-weight: 900;
+    transform: rotate(180deg);
+    box-sizing: border-box;
+    padding-right: 13px;
+}
+#click-area {
+  width: 300px;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@-moz-document url-prefix() {
+    #copy {
+        line-height: 11px;
+    }
+}

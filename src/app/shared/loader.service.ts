@@ -34,7 +34,7 @@ export class LoaderService {
           '  parent.updateData(time, progress);\n' +
           '}'
           );
-        this.jsData = this.jsData.replace(/TweenLite/g, 'tl');
+        this.jsData = this.jsData.replace(/gsap/g, 'tl');
         this.jsData = this.jsData.replace(/\/\/end/g, '');
         this.jsData = this.jsData.replace(/\}(?=[^}]*$)/g, '');
         // for Canvas
@@ -51,7 +51,7 @@ export class LoaderService {
         // creating the iframe
         this.htmlData = this.htmlData.replace(
           '</head>',
-          '<script type="text/javascript" src="' + gsUrl + 'TimelineLite.min.js"></script></head>'
+          '<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js">"></script></head>'
           );
         this.htmlData = this.htmlData.replace('css/' + size + '.css', this.baseHref + baseUrl + 'css/' + size + '.css?v=' + this.ver);
         this.htmlData = this.htmlData.replace('src="js/' + size + '.js"', '');
